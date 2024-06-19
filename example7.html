@@ -1,0 +1,46 @@
+<html>
+<head>
+<script type="text/javascript">
+function facto(){
+var str=document.getElementById("num").value;
+var f=1;
+var num=parseInt(str);
+for(i=num;i>0;i--){
+	f=f*i;
+}
+document.getElementById("result").innerHTML="The factorial of "+num+" is "+f;
+}
+</script>
+<style>
+      #main{
+        background-image:url(back.jpg);
+        image-orientation: 0grad;
+      }
+      #table1{
+        margin-left:auto;
+        margin-right:auto;
+        background-color:rgb(73, 222, 105);
+        border-color: brown;
+        border-radius: 9px;
+      }
+      #heading{
+        margin:auto;
+        color:rgb(99, 49, 160);
+        background-color: rgb(250, 214, 125);
+        border-color: chartreuse;
+        border-radius: 40px;
+      }
+</style>
+</head>
+<body id="main">
+<table border="3" id="heading">
+<th><h1>It will give you factorial of number you will give.</h1></th>
+</table>
+<table border="2" id="table1">
+<tr><th>Enter a number:</th><td><input type=text name=\t1 id=num></td>
+<td><input type=button value="Find Factorial" onclick=facto()></td><br>
+<td><p id=result></p></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!-- Develop a webpage that displays three text fields and a button. On clicking of the button, different random numbers between 0 and 9 must be displayed in each text field. If all numbers are same, display a message "All three matched". If any two are same, display a message "Two values are same". Otherwise, display "Better Luck next time". Use CSS for displaying the button and text-fields in oval shape. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATCH GAME</title>
+    <style>
+    #FN{
+        border-radius: 40px;
+        background-color: black;
+        text-align: center;
+        margin-right:auto;
+        margin-left:auto;
+        color:red;
+        font-size: larger;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+    #SN{
+        border-radius:40px;
+        background-color: black;
+        text-align: center;
+        color:red;
+        font-size: larger;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+    #TN{
+        border-radius:40px;
+        background-color: black;
+        text-align: center;
+        color:red;
+        font-size: larger;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+    #b1{
+        background-image:url(win2.jpg);
+    }
+    h1{
+        color:rgb(160, 255, 245) ;
+        background-color:rgb(25, 37, 23);
+    }
+    button{
+        border-radius:15px;
+        background-color:blue;
+        color:rgb(55, 46, 65);
+        font-size: xx-large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-bottom-width: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border-top-width: 10px;
+        border-right-width: 10px;
+        border-left-width: 10px;
+    }
+    </style>
+    <script type="text/javascript">
+        function fandom(){
+        
+      document.getElementById("FN").value= Math.floor(Math.random()*20) ;
+      document.getElementById("SN").value= Math.floor(Math.random()*20);
+      document.getElementById("TN").value= Math.floor(Math.random()*20);
+
+        function read()
+                    {
+            var a =document.getElementById("FN").value;
+            var b =document.getElementById("SN").value;
+            var c =document.getElementById("TN").value;
+            if(a==b && b==c){
+                alert("All three are matched.")
+            }
+            else if((a==b && b!=c)||(a==c && c!=b)||(b==c && c!=a)){
+                alert("Two values are same.")
+            }
+            else{
+                alert("Better luck next time.")
+            }
+                }
+            setTimeout(read,1000)
+        }
+
+    </script>
+</head>
+<body id="b1">
+<form>
+    <input type="text" id="FN">
+    <input type="text" id="SN">
+    <input type="text" id="TN"><br>
+    <button type="button" onclick="fandom()" id="main">Start!</button>
+</form>
+</body>
+</html>

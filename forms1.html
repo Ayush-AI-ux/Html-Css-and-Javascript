@@ -1,0 +1,101 @@
+ <html>
+<head>
+<title>FORM</title>
+</head>
+<style>
+      table{
+        background-color:#fff88fff;
+        margin-left:auto;
+        margin-right:auto;       
+}
+      caption{
+           background-color:red;
+           color:green;
+                                                        
+}
+
+</style>
+<script>function fv(){
+var a =document.getElementById("pass").value;
+var b =document.getElementById("cpass").value;
+var c=document.getElementById("mob").value;
+var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+if (a != b){
+    alert("Password and Confirm Password are not matching");
+    return false;
+   }
+else if(!c.match(phoneno)){
+alert("Mobile Number should be of 10 digits.");
+return false;
+}
+else{
+return true;
+}
+}
+</script>
+<body bgcolor=brown>
+<table border=2>
+<form name = "info" method = "post" action ="link of  the file where we have to submit the form">
+<tr>
+<td>Name:</td><td colspan=3><input type="text" name="t1" required placeholder="Enter your Name"><br></td>
+</tr>
+<tr>
+<td>Address:</td><td colspan=3><input type="text" name="t4" required placeholder="Enter your Address"><br></td>
+</tr>
+<tr>
+<td>Email:</td><td colspan=3><input type="email" name="t2" required placeholder="Enter your Email"><br></td>
+</tr>
+<tr>
+<td>Password:</td><td colspan=3><input type="Password" name="t5" id="pass" required placeholder="Enter your Password"><br></td>
+</tr>
+<tr>
+<td>Confirm Password:</td><td colspan=3><input type="Password" name="t5" id="cpass" required placeholder="Enter your Confirm Password"><br></td>
+</tr>
+<tr>
+<td>Mobile:</td><td colspan=3><input type="number" name="t3" required id="mob" placeholder="Enter your Mobile"><br></td>
+</tr>
+<tr>
+<td>Gender:</td><td><br><input type="radio" name="gen" value="male" checked>Male<br></td>
+<td><input type="radio" name="gen" value="Female">Female<br></td>
+<td><input type="radio" name="gen" value="Other">Other<br></td>
+</tr>
+<tr>
+<td>Hobbies:</td><td><br><input type="checkbox" name="Hobby" value="Chess" checked>Chess<br></td>
+<td><input type="checkbox" name="Hobby" value="Singing">Singing<br></td>
+<td><input type="checkbox" name="Hobby" value="Cricket">Cricket<br></td>
+</tr>
+<tr>
+<td>State:</td><td colspan=3><br><select name="State" required>
+   <option>Rajasthan</option>
+   <option>UttarPardesh</option>
+   <option>AndhraPradesh</option>
+   <option>Mizoram</option></td>
+</tr>
+</select><br>
+<tr>
+<td>City:</td><td colspan=3><br><select name="City" required>
+   <option>Jaipur</option>
+   <option>Agra</option>
+   <option>Mathura</option>
+   <option>chigchig</option></td>
+</select><br>
+</tr>
+<tr>
+<td>Board:</td><td colspan=3><br><select name="Board" required>
+   <option>CBSE</option>
+   <option>ICSE</option>
+   <option>UP Board</option>
+   <option>Rajasthan Board</option></td>
+</select><br>
+</tr>
+<tr>
+<td>Write about yourself:</td>
+<td colspan=3><input type="textrea" name="EAY" required row=2 column=1 placeholder="Write About Yourself"></td>
+</tr>
+<tr>
+<td class="submit" colspan=4 align:center><input type="submit" value="SUBMIT" onclick="return fv()"></td>
+</tr>
+</form>
+</table>
+</body>
+</html>
